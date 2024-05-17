@@ -1,0 +1,59 @@
+{
+    "name": "peekaboosdk",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "is a js sdk for improving load times",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.mjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": "https://github.com/devpeneur/peekaboo-sdk.git",
+    "author": "pranav2012 <p2012agarwal@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "test": "jest",
+        "test:coverage": "jest --coverage && open coverage/lcov-report/index.html",
+        "build": "tsup",
+        "start": "node dist/index.js",
+        "prepare": "husky",
+        "lint": "eslint \"{src,tests}/**/*.+(ts|js|tsx|jsx)\"",
+        "format": "prettier --check .",
+        "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
+        "format:fix": "prettier --write .",
+        "type-check": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@commitlint/config-conventional": "^19.1.0",
+        "@types/jest": "^29.5.12",
+        "@types/node": "20.12.2",
+        "@types/react": "^18.3.2",
+        "@types/react-dom": "18.2.23",
+        "@typescript-eslint/eslint-plugin": "7.4.0",
+        "@typescript-eslint/parser": "7.4.0",
+        "commitlint": "^19.2.1",
+        "eslint": "^9.0.0",
+        "eslint-plugin-react": "7.34.1",
+        "eslint-plugin-react-hooks": "4.6.0",
+        "husky": "^9.0.11",
+        "jest": "^29.7.0",
+        "prettier": "^3.2.5",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "styled-components": "^6.1.11",
+        "ts-jest": "^29.1.2",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.0.2",
+        "typescript": "^5.4.4",
+        "typescript-eslint": "^7.5.0"
+    },
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18"
+    }
+}
