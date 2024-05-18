@@ -8,7 +8,7 @@ import axios, {
 import { setupCache } from 'axios-cache-adapter';
 import { getConfig } from './sdk';
 
-interface AnalyticsData {
+export interface AnalyticsData {
 	url: string;
 	method: string;
 	status: number | string;

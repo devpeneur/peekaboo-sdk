@@ -3,7 +3,7 @@ import { createAxiosClient } from './axiosWrapper';
 import { initializeSDK, getConfig } from './sdk';
 import { initializeWebSocketClient, closeWebSocketClient } from './listner';
 
-interface Config {
+export interface Config {
 	baseURL: string;
 	timeout: number;
 	analyticsEndpoint: string;

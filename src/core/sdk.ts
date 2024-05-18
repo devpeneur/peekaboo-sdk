@@ -1,14 +1,4 @@
-interface Config {
-	baseURL: string;
-	timeout: number;
-	analyticsEndpoint: string;
-	sdkKey: string;
-	wsEndpoint: string;
-	onPreventionStatus: () => void;
-	apiCacheTTL?: number;
-	headers?: Record<string, string>;
-	enableCache?: boolean;
-}
+import { Config } from ".";
 
 let config: Config;
 
