@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 interface InitOptions {
-  theme?: object;
-  fonts?: object;
+	theme?: object;
+	fonts?: object;
 }
 
 export const GlobalStyles = createGlobalStyle`
@@ -14,17 +14,16 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const defaultTheme = {
-  primaryColor: '#3498db',
-  secondaryColor: '#2ecc71',
+	primaryColor: '#3498db',
+	secondaryColor: '#2ecc71',
 };
 
 class Peekaboo {
-  theme: object;
+	theme: object;
 
-  constructor(options: InitOptions) {
-    this.theme = { ...defaultTheme, ...options.theme };
-  }
-
+	constructor(options: InitOptions) {
+		this.theme = { ...defaultTheme, ...options.theme };
+	}
 }
 
 export default Peekaboo;
