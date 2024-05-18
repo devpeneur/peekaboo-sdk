@@ -1,10 +1,7 @@
 import { AxiosInstance } from 'axios';
 import { createAxiosClient } from './axiosWrapper';
 import { initializeSDK, getConfig } from './sdk';
-import {
-	initializeWebSocketClient,
-	closeWebSocketClient,
-} from './listner';
+import { initializeWebSocketClient, closeWebSocketClient } from './listner';
 
 interface Config {
 	baseURL: string;
