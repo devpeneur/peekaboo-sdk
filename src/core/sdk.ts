@@ -1,4 +1,4 @@
-import { Config } from ".";
+import { Config } from '.';
 
 let config: Config;
 
