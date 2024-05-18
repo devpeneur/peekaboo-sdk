@@ -27,12 +27,6 @@ jobs:
       
     - name: Run Tests
       run: yarn test
-    
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v4.0.1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        slug: devpeneur/peekaboo-sdk
 
     - name: Configure Git
       run: |
@@ -69,11 +63,6 @@ jobs:
       with:
         node-version: '18.x'
         registry-url: 'https://registry.npmjs.org'
-
-    - name: Publish package on NPM 📦
-      run: yarn publish --new-version ${{ steps.bump_version.outputs.new_version }}
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
     
     - name: Update GitHub Release
       uses: actions/create-release@v1
@@ -84,3 +73,8 @@ jobs:
         release_name: v${{ steps.bump_version.outputs.new_version }}
         body: |
           Release v${{ steps.bump_version.outputs.new_version }}
+
+    - name: Publish package on NPM 📦
+      run: yarn publish --new-version ${{ steps.bump_version.outputs.new_version }}
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
